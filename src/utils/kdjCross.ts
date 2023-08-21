@@ -1,5 +1,5 @@
 import { SlidingWindowArr } from 'sliding-window-arr';
-import { KDJ } from "../types/sharedTypes";
+import { KDJ } from '../types/sharedTypes';
 
 /**
  *
@@ -22,8 +22,8 @@ export function KdjCross(kdjArr: SlidingWindowArr<KDJ>, crossWindow = 6): number
 
   const firstIndex = Math.max(0, arrLen - crossWindow);
   const firstKDJ = kdjArr.get(firstIndex);
-  const firstK = firstKDJ.K
-  const firstD = firstKDJ.D
+  const firstK = firstKDJ.K;
+  const firstD = firstKDJ.D;
   // check golden cross
   // K value is Fast moving value, it should move faster
   if (lastK > lastD && firstK < firstD) {
@@ -32,7 +32,7 @@ export function KdjCross(kdjArr: SlidingWindowArr<KDJ>, crossWindow = 6): number
 
   // check death cross
   if (lastK < lastD && firstK > firstD) {
-    return -1
+    return -1;
   }
   return 0;
 }

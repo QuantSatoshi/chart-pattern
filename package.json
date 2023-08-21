@@ -1,5 +1,5 @@
 {
-  "name": "chart-pattern",
+  "name": "@qs1/chart-pattern",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",

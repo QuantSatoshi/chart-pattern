@@ -46,7 +46,7 @@ function getPressureResistanceChannel(candles, window) {
 }
 exports.getPressureResistanceChannel = getPressureResistanceChannel;
 // fibonacci Retracement 23.6%, 38.2%, 61.8%, and 78.6%
-function getPressureResistanceFib({ historyMax, historyMin }) {
+function getPressureResistanceFib({ historyMax, historyMin, }) {
     if (historyMax.length() === 0 || historyMin.length() === 0)
         throw new Error(`getPressureResistanceFib empty history`);
     // check if we have a drop

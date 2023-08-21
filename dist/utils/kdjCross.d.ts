@@ -1,5 +1,5 @@
 import { SlidingWindowArr } from 'sliding-window-arr';
-import { KDJ } from "../types/sharedTypes";
+import { KDJ } from '../types/sharedTypes';
 /**
  *
  * @param kdjArr

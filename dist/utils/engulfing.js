@@ -5,7 +5,7 @@ exports.getEngulfingPattern = void 0;
 // -1: drop engulfing, bear
 // 0: no devour pattern
 // 1: rise engulfing, bull
-function getEngulfingPattern(candles, priceChangeThreshold) {
+function getEngulfingPattern(candles, priceChangeThreshold = 0.005) {
     if (candles.length() < 3) {
         console.warn(`isDevourShortPattern requires candle length >= 3`);
         return 0;

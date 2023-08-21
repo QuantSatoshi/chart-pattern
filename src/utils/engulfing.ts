@@ -5,7 +5,7 @@ import { SlidingWindowArr } from 'sliding-window-arr';
 // -1: drop engulfing, bear
 // 0: no devour pattern
 // 1: rise engulfing, bull
-export function getEngulfingPattern(candles: SlidingWindowArr<CandleSchema>, priceChangeThreshold: 0.005): number {
+export function getEngulfingPattern(candles: SlidingWindowArr<CandleSchema>, priceChangeThreshold = 0.005): number {
   if (candles.length() < 3) {
     console.warn(`isDevourShortPattern requires candle length >= 3`);
     return 0;

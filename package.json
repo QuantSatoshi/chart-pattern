@@ -1,0 +1,49 @@
+{
+  "name": "chart-pattern",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc && rimraf ./dist/utils/__tests__",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w",
+    "prettier": "node ./node_modules/prettier/bin-prettier.js --parser=typescript --single-quote --trailing-comma=all --write --print-width=120 'src/**/*.ts'",
+    "test": "ava"
+  },
+  "ava": {
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ],
+    "typescript": {
+      "compile": false,
+      "rewritePaths": {
+        "src/": "dist/"
+      }
+    }
+  },
+  "author": "QuantSatoshi",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuantSatoshi/chart-pattern.git"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@ava/typescript": "^4.1.0",
+    "@types/node": "^11.13.4",
+    "ava": "^5.3.1",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "ts-node": "^10.9.1",
+    "typescript": "4.9"
+  },
+  "dependencies": {
+    "qs-js-utils": "^0.0.36",
+    "sliding-window-arr": "^0.1.2"
+  }
+}

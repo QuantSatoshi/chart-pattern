@@ -60,4 +60,6 @@ typings/
 #webstorm 
 .idea/
 
+.vscode
+
 dist/**/__tests__

@@ -15,10 +15,10 @@ export function macdDivergence({
     throw new Error(`macdDivergence require non empty values`);
 
   if (priceWindow.last()! > priceWindow.first()! && macdWindow.last()! < macdWindow.first()!) {
-    return true;
+    return 1;
   }
   if (priceWindow.last()! < priceWindow.first()! && macdWindow.last()! > macdWindow.last()!) {
-    return true;
+    return -1; 
   }
-  return false;
+  return 0; 
 }

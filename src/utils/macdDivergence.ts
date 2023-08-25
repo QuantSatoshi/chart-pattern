@@ -12,8 +12,9 @@ export function macdDivergence({
 }) {
   // if price is rising, but macd has down trend, then it is diverged
   if (priceWindow.length() === 0 || macdWindow.length() === 0)
+  {
     throw new Error(`macdDivergence require non empty values`);
-
+  }
   if (priceWindow.last()! > priceWindow.first()! && macdWindow.last()! < macdWindow.first()!) {
     return 1;
   }

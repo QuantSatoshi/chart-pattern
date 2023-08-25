@@ -6,6 +6,7 @@ import { SlidingWindowArr } from 'sliding-window-arr';
 // 0: no devour pattern
 // 1: rise engulfing, bull
 export function getEngulfingPattern(candles: SlidingWindowArr<CandleSchema>, priceChangeThreshold = 0.005): number {
+  console.log(`======getEngulfingPattern=====`);
   if (candles.length() < 3) {
     console.warn(`isDevourShortPattern requires candle length >= 3`);
     return 0;
@@ -13,6 +14,7 @@ export function getEngulfingPattern(candles: SlidingWindowArr<CandleSchema>, pri
   const lastCandle = candles.get(candles.length() - 1);
   const prevCandle = candles.get(candles.length() - 2);
   const prevPrevCandle = candles.get(candles.length() - 3);
+  //check the len of candle is long enough or not
   if (Math.abs(lastCandle.last - lastCandle.first) / lastCandle.last < priceChangeThreshold) return 0;
   if (Math.abs(prevCandle.last - prevCandle.first) / prevCandle.last < priceChangeThreshold) return 0;
   // detect a price rise then drop

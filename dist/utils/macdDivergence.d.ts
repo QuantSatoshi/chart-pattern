@@ -3,4 +3,4 @@ export declare function macdDivergence({ macdWindow, priceWindow, macdSignal, }:
     macdWindow: SlidingWindowArr<number>;
     macdSignal: SlidingWindowArr<number>;
     priceWindow: SlidingWindowArr<number>;
-}): boolean;
+}): 0 | 1 | -1;

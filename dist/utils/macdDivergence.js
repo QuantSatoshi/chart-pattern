@@ -6,11 +6,12 @@ function macdDivergence({ macdWindow, priceWindow, macdSignal, }) {
     if (priceWindow.length() === 0 || macdWindow.length() === 0) {
         throw new Error(`macdDivergence require non empty values`);
     }
+    // means this is likely going to revert the trend
     if (priceWindow.last() > priceWindow.first() && macdWindow.last() < macdWindow.first()) {
-        return 1;
+        return -1;
     }
     if (priceWindow.last() < priceWindow.first() && macdWindow.last() > macdWindow.last()) {
-        return -1;
+        return 1;
     }
     return 0;
 }

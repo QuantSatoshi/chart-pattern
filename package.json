@@ -1,6 +1,6 @@
 {
   "name": "@qs1/chart-pattern",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,7 @@
     "prettier": "node ./node_modules/prettier/bin-prettier.js --parser=typescript --single-quote --trailing-comma=all --write --print-width=120 'src/**/*.ts'",
     "test": "ava"
   },
+  "files": "dist/",
   "ava": {
     "nodeArguments": [
       "--loader=ts-node/esm"

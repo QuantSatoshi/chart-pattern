@@ -1,6 +1,6 @@
 import { SlidingWindowArr } from 'sliding-window-arr';
 import { CandleSchema } from '../types/sharedTypes';
-export declare function getPressureResistanceChannel(candles: SlidingWindowArr<CandleSchema>, window?: number): {
+export declare function getSupportResistanceChannel(candles: SlidingWindowArr<CandleSchema>, window?: number): {
     support: number;
     resistance: number;
 };

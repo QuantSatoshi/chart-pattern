@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSupportResistanceFib = exports.getPressureResistanceChannel = void 0;
+exports.getSupportResistanceFib = exports.getSupportResistanceChannel = void 0;
 // this function is expensive, don't call it too frequently
 // support and resistance can be 0, means they are not available and not confirmed
-function getPressureResistanceChannel(candles, window) {
+function getSupportResistanceChannel(candles, window) {
     const applyWindow = window || candles.length();
     if (candles.length() < applyWindow) {
         return { support: 0, resistance: 0 };
@@ -42,7 +42,7 @@ function getPressureResistanceChannel(candles, window) {
     }
     return { support, resistance };
 }
-exports.getPressureResistanceChannel = getPressureResistanceChannel;
+exports.getSupportResistanceChannel = getSupportResistanceChannel;
 // fibonacci Retracement 23.6%, 38.2%, 61.8%, and 78.6%
 function getSupportResistanceFib({ historyMax, historyMin, }) {
     if (historyMax.length() === 0 || historyMin.length() === 0)

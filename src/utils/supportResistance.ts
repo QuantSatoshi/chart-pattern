@@ -3,7 +3,7 @@ import { CandleSchema } from '../types/sharedTypes';
 
 // this function is expensive, don't call it too frequently
 // support and resistance can be 0, means they are not available and not confirmed
-export function getPressureResistanceChannel(
+export function getSupportResistanceChannel(
   candles: SlidingWindowArr<CandleSchema>,
   window?: number,
 ): { support: number; resistance: number } {

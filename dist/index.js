@@ -15,6 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./utils/engulfing"), exports);
-__exportStar(require("./utils/pressureResistance"), exports);
+__exportStar(require("./utils/supportResistance"), exports);
 __exportStar(require("./utils/kdjCross"), exports);
 __exportStar(require("./utils/macdDivergence"), exports);

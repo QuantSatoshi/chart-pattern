@@ -16,6 +16,10 @@ export function KdjCross(kdjArr: SlidingWindowArr<KDJ>, crossWindow = 6): number
     console.warn(`KdjCross len too short < 10`);
     return 0;
   }
+  if (crossWindow <= 1 || crossWindow>=arrLen) {
+    console.warn(`crossWindow setting is not meaningful should >1 and <history candle Len(40)`);
+    return 0;
+  }
   const lastKDJ = kdjArr.last()!;
   const lastK = lastKDJ.K;
   const lastD = lastKDJ.D;

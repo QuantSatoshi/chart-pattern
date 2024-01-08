@@ -916,10 +916,10 @@ pretty-ms@^8.0.0:
   dependencies:
     parse-ms "^3.0.0"
 
-qs-js-utils@^0.0.36:
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.36.tgz#030811a9391656e364c807a38fdbc45c617b6fcf"
-  integrity sha512-MmSCUc0msw2t86p1y7HCZHXjNuJTgSUcE7VpYGL5pV5okVy0WhmdvdugcUHUafBqcUwQ0J32RKE8GjQMl5UUTg==
+qs-js-utils@^0.0.42:
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/qs-js-utils/-/qs-js-utils-0.0.42.tgz#d4e436a699022aabed5c9e2b61659c7a5bd50f38"
+  integrity sha512-P0JZ8EN0XMhJogze/XVbP30NEsrg51+rVNLs6eF5RBchmXGQmB0wMD5aDe/YqVZdKn6BHx3K8EULVr56qi3pZg==
   dependencies:
     byline "^5.0.0"
 
